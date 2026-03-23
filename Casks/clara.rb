@@ -22,7 +22,7 @@ cask "clara" do
   name "clara"
   desc "Clara: Unified agent for personal automation (Go + Swift + Chrome)"
   homepage "https://github.com/brightpuddle/clara"
-  version "0.0.1"
+  version "0.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -33,19 +33,19 @@ cask "clara" do
   on_macos do
     on_intel do
       url "https://github.com/brightpuddle/clara/releases/download/v#{version}/clara_#{version}_darwin_amd64.tar.gz"
-      sha256 "78cd8a8d964c23f1a55ba3f1d9ac86302c7d8e3f31034754ae125932037f3b66"
+      sha256 "e6aef484c58641f17cb06636d612f9fe48ae76e02fe88871b0f056c479f3aa00"
     end
     on_arm do
       url "https://github.com/brightpuddle/clara/releases/download/v#{version}/clara_#{version}_darwin_arm64.tar.gz"
-      sha256 "9e772aae8c043f0a194af60e1994828963293646803178449666750afefc5d17"
+      sha256 "852de8fc54b1a8d157d3a04c319dceb0e4589153d737e279411291263dd99b2f"
     end
   end
 
   caveats do
     "To use the Chrome extension:"
     "1. Open Chrome -> chrome://extensions/"
-    "2. Enable "Developer mode""
-    "3. Click "Load unpacked""
+    "2. Enable 'Developer mode'"
+    "3. Click 'Load unpacked'"
     "4. Select: #{staged_path}/extension"
     ""
     "To start the Clara agent:"
